@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
-import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Dashboard, Pyramid, Line, Area, Bar, Pie } from './pages';
+import { Navbar, Footer } from './components';
+import { Dashboard, Pyramid, Area, Bar } from './pages';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
@@ -43,11 +43,9 @@ const App = () => {
           </div>
           {activeMenu ? (
             <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
-              <Sidebar />
             </div>
           ) : (
             <div className="w-0 dark:bg-secondary-dark-bg">
-              <Sidebar />
             </div>
           )}
           <div
@@ -61,7 +59,6 @@ const App = () => {
               <Navbar />
             </div>
             <div>
-              {themeSettings && (<ThemeSettings />)}
 
               <Routes>
                 {/* dashboard  */}
@@ -69,10 +66,8 @@ const App = () => {
                 <Route path="/dashboard" element={(<Dashboard />)} />
 
                 {/* charts  */}
-                <Route path="/line" element={<Line />} />
                 <Route path="/area" element={<Area />} />
                 <Route path="/bar" element={<Bar />} />
-                <Route path="/pie" element={<Pie />} />
                 <Route path="/pyramid" element={<Pyramid />} />
 
               </Routes>
