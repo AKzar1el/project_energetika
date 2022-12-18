@@ -4,7 +4,7 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Dashboard, Stacked, Pyramid, Line, Area, Bar, Pie, Financial, ColorMapping } from './pages';
+import { Dashboard, Pyramid, Line, Area, Bar, Pie } from './pages';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
@@ -27,7 +27,7 @@ const App = () => {
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
             <TooltipComponent
-              content="Settings"
+              content="Settingslol"
               position="Top"
             >
               <button
@@ -73,10 +73,7 @@ const App = () => {
                 <Route path="/area" element={<Area />} />
                 <Route path="/bar" element={<Bar />} />
                 <Route path="/pie" element={<Pie />} />
-                <Route path="/financial" element={<Financial />} />
-                <Route path="/color-mapping" element={<ColorMapping />} />
                 <Route path="/pyramid" element={<Pyramid />} />
-                <Route path="/stacked" element={<Stacked />} />
 
               </Routes>
             </div>

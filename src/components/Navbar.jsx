@@ -6,7 +6,6 @@ import { RiNotification3Line } from 'react-icons/ri';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
-import avatar from '../data/avatar.jpg';
 import { Notification, UserProfile } from '.';
 import { useStateContext } from '../contexts/ContextProvider';
 
@@ -44,32 +43,47 @@ const Navbar = () => {
     if (screenSize <= 900) {
       setActiveMenu(false);
     } else {
-      setActiveMenu(true);
+      setActiveMenu(false);
     }
   }, [screenSize]);
 
   const handleActiveMenu = () => setActiveMenu(!activeMenu);
 
   return (
-    <div className="flex justify-between p-2 md:ml-6 md:mr-6 relative">
-
-      <NavButton title="Menu" customFunc={handleActiveMenu} color={currentColor} icon={<AiOutlineMenu />} />
-      <div className="flex">
-        <TooltipComponent content="Vsebina" position="BottomCenter">
-          <div
-            className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
-          >
-            <p>
-              <span className="text-gray-400 text-14">Tomi Šeregi,</span>{' '}
-              <span className="text-gray-400 font-bold ml-1 text-14">
-                Multimedijske Tehnologije
-              </span>
+    <div className="flex-row">
+      <div className="bg-[#273443]">
+        <div className="flex justify-between p-2 pt-4 pb-4 md:ml-5 md:mr-5 relative ">
+          <div className="justify-start">
+            <p className="text-white font-bold ml-1 text-14 mt-1">
+              Energetika Slovenija
             </p>
           </div>
-        </TooltipComponent>
+          <div className="flex">
+            <TooltipComponent content="Vsebina" position="BottomCenter">
+              <div
+                className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
+              >
+                <p>
+                  <span className="text-white text-14">Tomi Šeregi,</span>{' '}
+                  <span className="text-white font-bold ml-1 text-14">
+                    Multimedijske Tehnologije
+                  </span>
+                </p>
+              </div>
+            </TooltipComponent>
 
-        {isClicked.notification && (<Notification />)}
-        {isClicked.userProfile && (<UserProfile />)}
+            {isClicked.notification && (<Notification />)}
+            {isClicked.userProfile && (<UserProfile />)}
+          </div>
+        </div>
+      </div>
+      <div className="w-full h-20 flex gap-3 justify-center justify-items-center content-center items-center hidden">
+        <div className="">
+          lol
+        </div>
+        <div>
+          lol
+        </div>
       </div>
     </div>
   );
