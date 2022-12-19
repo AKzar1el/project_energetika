@@ -1,17 +1,16 @@
 import React from 'react';
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, DateTime, Inject, Legend, Category, Tooltip, DataLabel, StackingColumnSeries } from '@syncfusion/ej2-react-charts';
-import { colorMappingSeries, ColorMappingPrimaryXAxis, ColorMappingPrimaryYAxis } from '../../data/dummy';
 import { useStateContext } from '../../contexts/ContextProvider';
 
-const StackedColumn = ({ width, height, data }) => {
+const StackedColumn = ({ width, height, data, id, x, y }) => {
   const { currentMode } = useStateContext();
 
   return (
     <ChartComponent
-      id="chartsStacked"
+      id={id}
       title="Trend čez 1990 - 2021"
-      primaryXAxis={ColorMappingPrimaryXAxis}
-      primaryYAxis={ColorMappingPrimaryYAxis}
+      primaryXAxis={x}
+      primaryYAxis={y}
       width={width}
       height={height}
       chartArea={{ border: { width: 0 } }}

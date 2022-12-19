@@ -4,8 +4,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 
-import { AnalogClock, Stacked, Pie, Button, LineChart, SparkLine, StackedColumn } from '../components';
-import { stacked2021, pie2021, colorMappingSeries, dropdownData, SparklineAreaData, ecomPieChartData, pieChartData, lineCustomSeries, LinePrimaryXAxis, LinePrimaryYAxis, LineOVEYAxis, lineOVESeries } from '../data/dummy';
+import { Stacked, Pie, MultiplePanes, LineChart, SparkLine, StackedColumn } from '../components';
+import { skupnaX, skupnaY, ColorMappingPrimaryXAxis, ColorMappingPrimaryYAxis, skupnaPoraba, stacked2021, pie2021, colorMappingSeries, dropdownData, SparklineAreaData, ecomPieChartData, pieChartData, lineCustomSeries, LinePrimaryXAxis, LinePrimaryYAxis, LineOVEYAxis, lineOVESeries } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 import header from './homepage.jpg';
 import images from './images.png';
@@ -187,7 +187,7 @@ const Dashboard = () => {
                 <li>Izbira časovnega obdobja;</li>
                 <li>Animirani podatki za razvoj v letih od 1990 do 2021;</li>
                 <li>Izvoz podatkov globalno ali glede na vir energije.</li>
-              </ul> 
+              </ul>
             </div>
             
           </div>
@@ -403,7 +403,7 @@ const Dashboard = () => {
           > 
             <Box sx={style} className="model-content">
               <Typography id="modal-modal-title" variant="h6" component="h6">
-                Emisije toplogrednih plinov v Sloveniji od leta 1990
+                PORABA, PROIZVODNJA IN POKRITOST PORABE Z DOMAČO PROIZVODNJO <span className="block"> V OBDOBJU 2017–2021</span>
                 <span className="text-lg block">Neto emisije toplogrednih plinov (vir: <a className="text-blue-700" href="https://ec.europa.eu/eurostat/databrowser/view/SDG_13_10__custom_1397649/bookmark/table?lang=en&bookmarkId=22c6f8a9-9c21-463d-a948-2a4e95bb2961">EEA</a>)</span>
               </Typography>
               <Typography id="modal-modal-description" sx={{ mt: 1 }}>
@@ -413,7 +413,7 @@ const Dashboard = () => {
                 </p>            
               </Typography>
               <Box sx={{ mt:5 }}>
-                <img src="https://i.gyazo.com/49738be17f1de3a2c4f19d2fb637ed67.png" />
+                <MultiplePanes />
               </Box>
             </Box>
             
@@ -426,7 +426,7 @@ const Dashboard = () => {
           > 
             <Box sx={style} className="model-content">
               <Typography id="modal-modal-title" variant="h6" component="h6">
-                Emisije toplogrednih plinov v Sloveniji od leta 1990
+                PORABA ELEKTRIČNE ENERGIJE V OBDOBJU 2017–2021PORABA ELEKTRIČNE ENERGIJE V OBDOBJU 2017–2021
                 <span className="text-lg block">Neto emisije toplogrednih plinov (vir: <a className="text-blue-700" href="https://ec.europa.eu/eurostat/databrowser/view/SDG_13_10__custom_1397649/bookmark/table?lang=en&bookmarkId=22c6f8a9-9c21-463d-a948-2a4e95bb2961">EEA</a>)</span>
               </Typography>
               <Typography id="modal-modal-description" sx={{ mt: 1 }}>
@@ -435,7 +435,9 @@ const Dashboard = () => {
                 </p>           
               </Typography>
               <Box sx={{ mt:5 }}>
-                <img src="https://i.gyazo.com/9a637980218c416a8d55f991f4f588a7.png" />
+              <div id="modal">
+                <StackedColumn id="modal" data={skupnaPoraba} x={skupnaX} y={skupnaY} currentMode={currentMode} width="100%" height="90%" />
+              </div>
               </Box>
             </Box>
             
@@ -572,7 +574,7 @@ const Dashboard = () => {
           </p>
           <div className="w-auto sm:w-auto mt-7 flex flex-wrap justify-center">
             <div id="chartsStacked" className="p-1 w-screen md:w-1/2 ">
-              <StackedColumn data={renderSwitch2(currentFruit)} currentMode={currentMode} width="100%" height="90%" />
+              <StackedColumn id="chartsStacked" data={renderSwitch2(currentFruit)} x={ColorMappingPrimaryXAxis} y={ColorMappingPrimaryYAxis} currentMode={currentMode} width="100%" height="90%" />
             </div>
             <div className="p-1 w-auto md:w-1/2">
               <Pie id="chart-pie" data={renderSwitch(currentFruit)} legendVisiblity width="100%" height="90%" />
