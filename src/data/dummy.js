@@ -382,6 +382,198 @@ export const SparklineAreaData = [
 
 ];
 
+//Cena dobavljene el. e. za gospodinjskega odjemalca
+export const cenaDobData = [
+  [
+    { x: '2022', y: 0.2424 },
+    { x: '2021', y: 0.3479 },
+    { x: '2020', y: 0.2382 },
+    { x: '2019.', y: 0.3358 },
+    { x: '2018', y: 0.3071 },
+    { x: '2017', y: 0.2535 },
+    { x: '2016', y: 0.1863 },
+    { x: '2015.', y: 0.2223 },
+    { x: '2014', y: 0.2129 },
+    { x: '2013', y: 0.2551 },
+    { x: '2012', y: 0.2212 },
+    { x: '2011.', y: 0.2300 },
+    { x: '2010', y: 0.2610 },
+    { x: '2009', y: 0.2828 },
+    { x: '2008', y: 0.1932 },
+    { x: '2007', y: 0.2288 },
+  ],
+  [
+    { x: '2022', y1: 0.1690 },
+    { x: '2021', y1: 0.2115 },
+    { x: '2020', y1: 0.1666 },
+    { x: '2019.', y1: 0.2043 },
+    { x: '2018', y1: 0.1998 },
+    { x: '2017', y1: 0.1942 },
+    { x: '2016', y1: 0.1984 },
+    { x: '2015.', y1: 0.1900 },
+    { x: '2014', y1: 0.1950 },
+    { x: '2013', y1: 0.1885 },
+    { x: '2012', y1: 0.1749 },
+    { x: '2011.', y1: 0.1673 },
+    { x: '2010', y1: 0.1672 },
+    { x: '2009', y1: 0.1595 },
+    { x: '2008', y1: 0.1296 },
+    { x: '2007', y1: 0.1310 },
+  ],
+  [
+    { x: '2022', y2: 0.1390 },
+    { x: '2021', y2: 0.1662 },
+    { x: '2020', y2: 0.1448 },
+    { x: '2019.', y2: 0.1666 },
+    { x: '2018', y2: 0.1613 },
+    { x: '2017', y2: 0.1610 },
+    { x: '2016', y2: 0.1629 },
+    { x: '2015.', y2: 0.1589 },
+    { x: '2014', y2: 0.1630 },
+    { x: '2013', y2: 0.1657 },
+    { x: '2012', y2: 0.1542 },
+    { x: '2011.', y2: 0.1441 },
+    { x: '2010', y2: 0.1401 },
+    { x: '2009', y2: 0.1346 },
+    { x: '2008', y2: 0.1156 },
+    { x: '2007', y2: 0.1116 },
+  ],
+  [
+    { x: '2022', y3: 0.1215 },
+    { x: '2021', y3: 0.1469 },
+    { x: '2020', y3: 0.1312 },
+    { x: '2019.', y3: 0.1453 },
+    { x: '2018', y3: 0.1424 },
+    { x: '2017', y3: 0.1399 },
+    { x: '2016', y3: 0.1419 },
+    { x: '2015.', y3: 0.1397 },
+    { x: '2014', y3: 0.1453 },
+    { x: '2013', y3: 0.1473 },
+    { x: '2012', y3: 0.1405 },
+    { x: '2011.', y3: 0.1332 },
+    { x: '2010', y3: 0.1302 },
+    { x: '2009', y3: 0.1231 },
+    { x: '2008', y3: 0.1092 },
+    { x: '2007', y3: 0.1021 },
+  ],
+  [
+    { x: '2022', y4: 0.1156 },
+    { x: '2021', y4: 0.1254 },
+    { x: '2020', y4: 0.1313 },
+    { x: '2019.', y4: 0.1226 },
+    { x: '2018', y4: 0.1279 },
+    { x: '2017', y4: 0.1239 },
+    { x: '2016', y4: 0.1266 },
+    { x: '2015.', y4: 0.1272 },
+    { x: '2014', y4: 0.1298 },
+    { x: '2013', y4: 0.1279 },
+    { x: '2012', y4: 0.1259 },
+    { x: '2011.', y4: 0.1233 },
+    { x: '2010', y4: 0.1209 },
+    { x: '2009', y4: 0.1176 },
+    { x: '2008', y4: 0.1076 },
+    { x: '2007', y4: 0.0958 },
+  ],
+  [
+    { x: '2022', y5: 0.1333 },
+    { x: '2021', y5: 0.1583 },
+    { x: '2020', y5: 0.1650 },
+    { x: '2019.', y5: 0.1393 },
+    { x: '2018', y5: 0.1606 },
+    { x: '2017', y5: 0.1576 },
+    { x: '2016', y5: 0.1609 },
+    { x: '2015.', y5: 0.1568 },
+    { x: '2014', y5: 0.1604 },
+    { x: '2013', y5: 0.1629 },
+    { x: '2012', y5: 0.1521 },
+    { x: '2011.', y5: 0.1474 },
+    { x: '2010', y5: 0.1423 },
+    { x: '2009', y5: 0.1363 },
+    { x: '2008', y5: 0.1159 },
+    { x: '2007', y5: 0.1107 },
+  ],
+
+];
+export const cenaDob = [
+  { dataSource: cenaDobData[0],
+    xName: 'x',
+    yName: 'y',
+    name: 'DA (<1000 KWh)',
+    width: '2',
+    marker: { visible: true, width: 5, height: 5 },
+    type: 'Column' },
+  { dataSource: cenaDobData[1],
+    xName: 'x',
+    yName: 'y1',
+    name: 'DB (1000 do <2500 KWh)	',
+    width: '2',
+    marker: { visible: true, width: 5, height: 5 },
+    type: 'Column' },
+
+  { dataSource: cenaDobData[2],
+    xName: 'x',
+    yName: 'y2',
+    name: 'DC (2500 do <5000 KWh)	',
+    width: '2',
+    marker: { visible: true, width: 5, height: 5 },
+    type: 'Column' 
+  },
+
+  { dataSource: cenaDobData[3],
+    xName: 'x',
+    yName: 'y3',
+    name: 'DD (5000 do <15000 KWh)	',
+    width: '2',
+    marker: { visible: true, width: 5, height: 5 },
+    type: 'Column' 
+  },
+
+  { dataSource: cenaDobData[4],
+    xName: 'x',
+    yName: 'y4',
+    name: 'DE ( >= 15000 KWh)	',
+    width: '2',
+    marker: { visible: true, width: 5, height: 5 },
+    type: 'Column' 
+  },
+
+  { dataSource: cenaDobData[5],
+    xName: 'x',
+    yName: 'y5',
+    name: 'Slovenija',
+    width: '2',
+    marker: { visible: true, width: 5, height: 5 },
+    type: 'Column' 
+  },
+ 
+      
+
+];
+export const cenaDobX = {
+  majorGridLines: { width: 1 },
+  minorGridLines: { width: 1 },
+  majorTickLines: { width: 1 },
+  minorTickLines: { width: 1 },
+  intervalType: 'Years',
+  interval:1,
+  edgeLabelPlacement: 'Shift',
+  valueType: 'Category',
+  labelFormat: 'y',
+};
+export const cenaDobY = {
+  lineStyle: { width: 0 },
+  minimum: 0,
+  maximum: 0.40,
+  interval: 0.05,
+  majorTickLines: { width: 1 },
+  majorGridLines: { width: 1 },
+  minorGridLines: { width: 1 },
+  minorTickLines: { width: 1 },
+  title: "EUR/kWh",
+  labelFormat: '{value}',
+};
+//////////////////////////////////////////////////////
+
 export const lineCustomSeries = [
   { dataSource: lineChartData[0],
     xName: 'x',
@@ -506,6 +698,197 @@ export const lineOVESeries = [
 
 // Podatki za energetsko bilanco
 
+//2021..1992 X
+export const vsaX = {
+  majorGridLines: { width: 1 },
+  minorGridLines: { width: 1 },
+  majorTickLines: { width: 1 },
+  minorTickLines: { width: 1 },
+  intervalType: 'Months',
+  title: '',
+  interval: 1,
+  valueType: 'Category',
+  labelFormat: 'y',
+  edgeLabelPlacement: 'Shift',
+};
+//2021..1992 Y
+export const vsaY = {
+  lineStyle: { width: 0 },
+  minimum: 0,
+  maximum: 1400,
+  interval: 200,
+  majorTickLines: { width: 1 },
+  majorGridLines: { width: 1 },
+  minorGridLines: { width: 1 },
+  minorTickLines: { width: 1 },
+  title: "Proizvodnja električne energije [GWh]",
+  labelFormat: '{value}',
+};
+//Podatki
+//2021
+export const bil2021pod = [
+  [
+    { x: 'jan.', y: 517},
+    { x: 'feb.', y: 467 },
+    { x: 'mar.', y: 515 },
+    { x: 'apr.', y: 0 },
+    { x: 'maj.', y: 416 },
+    { x: 'jun.', y: 491 },
+    { x: 'jul.', y: 502 },
+    { x: 'avg.', y: 502 },
+    { x: 'sep.', y: 486 },
+    { x: 'okt.', y: 507 },
+    { x: 'nov.', y: 498 },
+    { x: 'dec.', y: 515 },
+  ],
+  [
+    { x: 'jan.', y1: 370},
+    { x: 'feb.', y1: 303 },
+    { x: 'mar.', y1: 367 },
+    { x: 'apr.', y1: 308 },
+    { x: 'maj.', y1: 165 },
+    { x: 'jun.', y1: 122 },
+    { x: 'jul.', y1: 144 },
+    { x: 'avg.', y1: 354 },
+    { x: 'sep.', y1: 269 },
+    { x: 'okt.', y1: 314 },
+    { x: 'nov.', y1: 357 },
+    { x: 'dec.', y1: 356 },
+  ],
+  [
+    { x: 'jan.', y2: 422},
+    { x: 'feb.', y2: 411 },
+    { x: 'mar.', y2: 319 },
+    { x: 'apr.', y2: 333 },
+    { x: 'maj.', y2: 649 },
+    { x: 'jun.', y2: 546 },
+    { x: 'jul.', y2: 423 },
+    { x: 'avg.', y2: 377 },
+    { x: 'sep.', y2: 213 },
+    { x: 'okt.', y2: 238 },
+    { x: 'nov.', y2: 303 },
+    { x: 'dec.', y2: 271 },
+  ],
+
+];
+//2021
+export const bil2021 = [
+
+  { dataSource: bil2021pod[0],
+    xName: 'x',
+    yName: 'y',
+    name: 'NE',
+    type: 'StackingColumn',
+    background: 'blue',
+    opacity:0.9,
+    fill:'#69D2E7',
+    width:3,
+  },
+
+  { dataSource: bil2021pod[1],
+    xName: 'x',
+    yName: 'y1',
+    name: 'TE',
+    type: 'StackingColumn',
+    background: 'red',
+    opacity:0.9,
+  },
+
+  { dataSource: bil2021pod[2],
+    xName: 'x',
+    yName: 'y2',
+    name: 'HE',
+    type: 'StackingColumn',
+    background: 'purple',
+    opacity:0.9,
+
+  },
+
+];
+///////////////////////////////////////////////
+//Podatki
+//2021
+           
+export const bil2020pod = [
+  [
+    { x: 'jan.', y: 518},
+    { x: 'feb.', y: 483 },
+    { x: 'mar.', y: 518 },
+    { x: 'apr.', y: 497 },
+    { x: 'maj.', y: 514 },
+    { x: 'jun.', y: 496 },
+    { x: 'jul.', y: 509 },
+    { x: 'avg.', y: 506 },
+    { x: 'sep.', y: 494 },
+    { x: 'okt.', y: 517 },
+    { x: 'nov.', y: 501 },
+    { x: 'dec.', y: 488 },
+  ],
+  [
+    { x: 'jan.', y1: 299},
+    { x: 'feb.', y1:  289},
+    { x: 'mar.', y1: 228 },
+    { x: 'apr.', y1:  200},
+    { x: 'maj.', y1: 181 },
+    { x: 'jun.', y1: 315 },
+    { x: 'jul.', y1: 412 },
+    { x: 'avg.', y1: 347 },
+    { x: 'sep.', y1: 365 },
+    { x: 'okt.', y1: 482 },
+    { x: 'nov.', y1: 445 },
+    { x: 'dec.', y1: 394 },
+  ],
+  [
+    { x: 'jan.', y2: 422},
+    { x: 'feb.', y2: 411 },
+    { x: 'mar.', y2: 319 },
+    { x: 'apr.', y2: 333 },
+    { x: 'maj.', y2: 649 },
+    { x: 'jun.', y2: 546 },
+    { x: 'jul.', y2: 423 },
+    { x: 'avg.', y2: 377 },
+    { x: 'sep.', y2: 213 },
+    { x: 'okt.', y2: 238 },
+    { x: 'nov.', y2: 303 },
+    { x: 'dec.', y2: 271 },
+  ],
+
+];
+//2020
+export const bil2020 = [
+
+  { dataSource: bil2020pod[0],
+    xName: 'x',
+    yName: 'y',
+    name: 'NE',
+    type: 'StackingColumn',
+    background: 'blue',
+    opacity:0.9,
+    fill:'#69D2E7',
+    width:3,
+  },
+
+  { dataSource: bil2020pod[1],
+    xName: 'x',
+    yName: 'y1',
+    name: 'TE',
+    type: 'StackingColumn',
+    background: 'red',
+    opacity:0.9,
+  },
+
+  { dataSource: bil2020pod[2],
+    xName: 'x',
+    yName: 'y2',
+    name: 'HE',
+    type: 'StackingColumn',
+    background: 'purple',
+    opacity:0.9,
+
+  },
+
+];
+///////////////////////////////////////////////
 // StackedColumn grafikoni za energetsko bilanco
 export const ColorMappingPrimaryXAxis = {
   majorGridLines: { width: 1 },
@@ -514,6 +897,7 @@ export const ColorMappingPrimaryXAxis = {
   minorTickLines: { width: 1 },
   intervalType: 'Years',
   title: 'Leta',
+  interval: 1,
   valueType: 'DateTime',
   labelFormat: 'y',
   edgeLabelPlacement: 'Shift',
@@ -542,10 +926,16 @@ export const pieChartData = [
 
 // 2021
 export const pie2021 = [
-  { x: 'Izvoz', y: 15, text: '15%' },
-  { x: 'Uvoz', y: 6, text: '6%' },
-  { x: 'Domača proizvodnja', y: 20, text: '20%' },
-  { x: 'Končna poraba', y: 30, text: '30%' },
+  { x: 'Izvoz', y: 15, text: '30%' },
+  { x: 'Uvoz', y: 6, text: '46%' },
+  { x: 'Domača proizvodnja', y: 20, text: '24%' },
+];
+
+// 2020
+export const pie2020 = [
+  { x: 'Izvoz', y: 15, text: '30%' },
+  { x: 'Uvoz', y: 6, text: '46%' },
+  { x: 'Domača proizvodnja', y: 20, text: '24%' },
 ];
 
 export const ecomPieChartData = [
@@ -868,7 +1258,7 @@ export const skupnaX = {
   majorTickLines: { width: 1 },
   minorTickLines: { width: 1 },
   intervalType: 'Years',
-  valueType: 'DateTime',
+  valueType: 'Category',
   labelFormat: 'y',
   edgeLabelPlacement: 'Shift',
 };
@@ -885,10 +1275,55 @@ export const skupnaY = {
   title: "Poraba električne energije [GWh]",
   labelFormat: '{value}',
 };
+// Podatki
+export const skupnaData = [
+  [
+    { x: '2021', y: 134},
+    { x: '2020', y: 94 },
+    { x: '2019.', y: 160 },
+    { x: '2018', y: 208 },
+    { x: '2017', y: 182 },
+  ],
+  [
+    { x: '2021', y1: 1350},
+    { x: '2020', y1: 1435 },
+    { x: '2019.', y1: 1732 },
+    { x: '2018', y1: 1902 },
+    { x: '2017', y1: 1947 },
+  ],
+  [
+    { x: '2021', y2: 7803 },
+    { x: '2020', y2: 7418 },
+    { x: '2019.', y2: 8014 },
+    { x: '2018', y2: 8006 },
+    { x: '2017', y2: 7843 },
+  ],
+  [
+    { x: '2021', y3: 3665 },
+    { x: '2020', y3: 3559 },
+    { x: '2019.', y3: 3386 },
+    { x: '2018', y3: 3368 },
+    { x: '2017', y3: 3327 },
+  ],
+  [
+    { x: '2021', y4: 384 },
+    { x: '2020', y4: 391 },
+    { x: '2019.', y4: 272 },
+    { x: '2018', y4: 252 },
+    { x: '2017', y4: 365 },
+  ],
+  [
+    { x: '2021', y5: 837 },
+    { x: '2020', y5: 849 },
+    { x: '2019.', y5: 859 },
+    { x: '2018', y5: 880 },
+    { x: '2017', y5: 893 },
+  ],
+];
 // Inicializacija Podatkov
 export const skupnaPoraba = [
 
-  { dataSource: stackedData2021[0],
+  { dataSource: skupnaData[0],
     xName: 'x',
     yName: 'y',
     name: 'Poslovni odjem na prenosnem sistemu',
@@ -899,7 +1334,7 @@ export const skupnaPoraba = [
     width:3,
   },
 
-  { dataSource: stackedData2021[1],
+  { dataSource: skupnaData[1],
     xName: 'x',
     yName: 'y1',
     name: 'Poslovni odjem na zaprtih distribucijskih sistemih',
@@ -908,7 +1343,7 @@ export const skupnaPoraba = [
     opacity:0.9,
   },
 
-  { dataSource: stackedData2021[2],
+  { dataSource: skupnaData[2],
     xName: 'x',
     yName: 'y2',
     name: 'Poslovni odjem na distribucijskem sistemu',
@@ -918,7 +1353,7 @@ export const skupnaPoraba = [
 
   },
 
-  { dataSource: stackedData2021[3],
+  { dataSource: skupnaData[3],
     xName: 'x',
     yName: 'y3',
     name: 'Gospodinjski odjem',
@@ -927,75 +1362,26 @@ export const skupnaPoraba = [
     opacity:0.9,
   },
 
-  { dataSource: stackedData2021[3],
+  { dataSource: skupnaData[4],
     xName: 'x',
-    yName: 'y3',
+    yName: 'y4',
     name: 'Poraba ČHE Avče ',
     type: 'StackingColumn',
     background: 'black',
     opacity:0.9,
   },
 
+  { dataSource: skupnaData[5],
+    xName: 'x',
+    yName: 'y5',
+    name: 'Izgube na sistemu',
+    type: 'StackingColumn',
+    background: 'black',
+    opacity:0.9,
+  },
+
 ];
-// Podatki
-export const skupnaData = [
-  [
-    { x: '2021', y: 10315},
-    { x: '2020', y: 9763 },
-    { x: '2019.', y: 10421 },
-    { x: '2018', y: 11593 },
-    { x: '2017', y: 111953 },
-    { x: '2016', y: 11321 },
-    { x: '2015.', y: 106211 },
-    { x: '2014', y: 125142 },
-    { x: '2013', y: 11220 },
-    { x: '2012', y: 116638 },
-    { x: '2011.', y: 117597 },
-    { x: '2010', y: 119087 },
-  ],
-  [
-    { x: '2021', y1: 39261},
-    { x: '2020', y1: 42699 },
-    { x: '2019.', y1: 4616 },
-    { x: '2018', y1: 47379 },
-    { x: '2017', y1: 47757 },
-    { x: '2016', y1: 48050 },
-    { x: '2015.', y1: 4435 },
-    { x: '2014', y1: 43957 },
-    { x: '2013', y1: 5676},
-    { x: '2012', y1: 5836 },
-    { x: '2011.', y1: 61539 },
-    { x: '2010', y1: 60927 },
-  ],
-  [
-    { x: '2021', y2: 32450 },
-    { x: '2020', y2: 30790 },
-    { x: '2019.', y2: 3035 },
-    { x: '2018', y2: 30338 },
-    { x: '2017', y2: 30921 },
-    { x: '2016', y2: 2940 },
-    { x: '2015.', y2: 2709 },
-    { x: '2014', y2: 26197 },
-    { x: '2013', y2: 289 },
-    { x: '2012', y2: 29716 },
-    { x: '2011.', y2: 3094 },
-    { x: '2010', y2: 36105 },
-  ],
-  [
-    { x: '2021', y3: 8252 },
-    { x: '2020', y3: 8430 },
-    { x: '2019.', y3: 8230 },
-    { x: '2018', y3: 8172 },
-    { x: '2017', y3: 84265 },
-    { x: '2016', y3: 77699 },
-    { x: '2015.', y3: 78326 },
-    { x: '2014', y3: 8469 },
-    { x: '2013', y3: 72540 },
-    { x: '2012', y3: 72926 },
-    { x: '2011.', y3: 77545 },
-    { x: '2010', y3: 71911 },
-  ],
-];
+
 
 // X/Y za energetsko bilanco
 

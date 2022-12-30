@@ -7,3 +7,5 @@ export { default as Stacked } from './Charts/Stacked';
 export { default as Pie } from './Charts/Pie';
 export { default as StackedColumn } from './Charts/StackedColumn';
 export { default as MultiplePanes } from './Charts/MultiplePanes';
+export { default as StackedArea100 } from './Charts/StackedArea100';
+export { default as Line } from './Charts/Line';

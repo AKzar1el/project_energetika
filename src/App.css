@@ -28,6 +28,36 @@
   background-color: transparent;
 }
 
+/* button */
+.lol{
+  position:relative;
+  display:inline-block;
+  text-decoration: none;
+  color: #fff;
+  outline: 2px solid #7EFFB2;
+  padding: 30px 60px;
+  overflow: hidden;
+  transition: color 1s;
+}
+.lol:hover{
+  color: #090909;
+}
+.lol::before{
+  content: '';
+  position:absolute;
+  top: 0;
+  left: -50px;
+  z-index: -1;
+  width:150%;
+  height:100%;
+  background-color: #7EFFB2;
+  transform: scaleX(0) skewX(35deg);
+  transform-origin: left;
+  transition: transform 1s;
+}
+.lol:hover::before{
+  transform: scaleX(1) skewX(35deg);
+}
 /* modal-css */
 
 /* The Modal (background) */
@@ -72,15 +102,15 @@
   visibility: hidden;
   width: 120px;
   background-color: transparent;
-  color: #0b4b5b;
+  color: white;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
   border: 0px #00758f;
   border-style: solid;
   position: fixed;
-  top: -20%;
-  left: -40%;
+  top: 30%;
+  left: 20%;
 
   /* Position the tooltip */
   position: absolute;
