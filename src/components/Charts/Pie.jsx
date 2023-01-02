@@ -3,12 +3,13 @@ import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, Accu
 
 import { useStateContext } from '../../contexts/ContextProvider';
 
-const Doughnut = ({ id, data, legendVisiblity, height, width }) => {
+const Doughnut = ({ id, data, title, legendVisiblity, height, width }) => {
   const { currentMode } = useStateContext();
 
   return (
     <AccumulationChartComponent
       id={id}
+      title={title}
       legendSettings={{ visible: legendVisiblity, background: 'white', position: 'Bottom' }}
       width={width}
       height={height}

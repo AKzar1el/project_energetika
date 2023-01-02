@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 
 import { Line, StackedArea100, Stacked, Pie, MultiplePanes, LineChart, SparkLine, StackedColumn } from '../components';
-import { oveX, pie2020, bil2021, vsaX, vsaY, cenaDobX, cenaDobY, cenaDob, skupnaX, skupnaY, ColorMappingPrimaryXAxis, ColorMappingPrimaryYAxis, skupnaPoraba, stacked2021, pie2021, colorMappingSeries, dropdownData, SparklineAreaData, ecomPieChartData, pieChartData, lineCustomSeries, LinePrimaryXAxis, LinePrimaryYAxis, LineOVEYAxis, lineOVESeries } from '../data/dummy';
+import { Y2019, Y2020, oveX, pie2019, pie2020, bil2019, bil2020, bil2021, vsaX, vsaY, cenaDobX, cenaDobY, cenaDob, skupnaX, skupnaY, ColorMappingPrimaryXAxis, ColorMappingPrimaryYAxis, skupnaPoraba, stacked2021, pie2021, colorMappingSeries, dropdownData, SparklineAreaData, ecomPieChartData, pieChartData, lineCustomSeries, LinePrimaryXAxis, LinePrimaryYAxis, LineOVEYAxis, lineOVESeries } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 import header from './homepage.jpg';
 import ove from './ove.png';
@@ -65,6 +65,10 @@ const Dashboard = () => {
 
   const renderY = (param) => {
     switch(param) {
+      case '2019':
+        return Y2019;
+      case '2020':
+        return Y2020;
       case 'vsa':
         return ColorMappingPrimaryYAxis;
       default:
@@ -74,6 +78,8 @@ const Dashboard = () => {
 
   const renderSwitch = (param) => {
     switch(param) {
+      case '2019':
+        return pie2019;
       case '2020':
         return pie2020;
       case '2021':
@@ -87,45 +93,45 @@ const Dashboard = () => {
     switch(param) {
       case '2019':
         skp=15423;
-        div11=15.173;
-        div12=14.746;
+        div11=9.021;
+        div12=6.577;
         div13="+6,3 %";
-        div21="92,6-% pokritost porabe";
-        div22="električne energije z domačo";
-        div23="proizvodnjo, največja v zadnjih";
-        div24="petih letih";
+        div21="83,50-% ";
+        div22="pokritost porabe električne energije ";
+        div23="z domačo proizvodnjo";
+        div24="";
         div31="145,20";
-        div41="22,0 ";
-        div51="Epidemija ni vplivala na";
-        div52="realizacijo razvojnih načrtov";
-        div53="elektrooperaterjev";
-        return bil2021; 
+        div41="22,00 ";
+        div51="Slovenija v 2019";
+        div52="neto uvoznica";
+        div53="električne energije";
+        return bil2019; 
       case '2020':
         skp=15423;
-        div11=15.173;
-        div12=14.746;
+        div11=7.120;
+        div12=6.103;
         div13="+6,3 %";
         div21="92,6-% pokritost porabe";
         div22="električne energije z domačo";
         div23="proizvodnjo, največja v zadnjih";
         div24="petih letih";
         div31="145,20";
-        div41="25,0 ";
+        div41="25,00 ";
         div51="Epidemija ni vplivala na";
         div52="realizacijo razvojnih načrtov";
         div53="elektrooperaterjev";
-        return bil2021; 
+        return bil2020; 
       case '2021':
         skp=15423;
-        div11=15.173;
-        div12=14.746;
+        div11=8.387;
+        div12=5.952;
         div13="+6,3 %";
         div21="14,423 GWh";
         div22="proizvedene električne energije,";
         div23="od tega 36,7 % iz proizvodnih";
         div24="naprav na obnovljive vire energije";
         div31="145,20";
-        div41="23,5";
+        div41="23,50";
         div51="Slovenija v 2021 neto uvoznica";
         div52="električne energije";
         div53="distribucijskem sistemu";
@@ -675,10 +681,10 @@ const Dashboard = () => {
           </p>
           <div className="w-auto sm:w-auto mt-7 flex flex-wrap justify-center">
             <div id="chartsStacked" className="p-1 w-screen md:w-1/2 ">
-              <StackedColumn id="chartsStacked" data={renderSwitch2(currentFruit)} x={renderX(currentFruit)} y={renderY(currentFruit)} currentMode={currentMode} width="100%" height="90%" />
+              <StackedColumn title="Gibanje Proizvodnje Električne Energije Iz Velikih Elektrarn" id="chartsStacked" data={renderSwitch2(currentFruit)} x={renderX(currentFruit)} y={renderY(currentFruit)} currentMode={currentMode} width="100%" height="90%" />
             </div>
             <div className="p-1 w-auto md:w-1/2">
-              <Pie id="chart-pie" data={renderSwitch(currentFruit)} legendVisiblity width="100%" height="90%" />
+              <Pie title="Energetska bilanca %" id="chart-pie" data={renderSwitch(currentFruit)} legendVisiblity width="100%" height="90%" />
             </div>
           </div>
         </div>
@@ -715,18 +721,15 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="mt-12 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex justify-center items-center gap-10">
-            <div className="flex justify-between items-center">
+          <div className="mt-12 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex flex-nowrap justify-left items-left gap-10">
+            <div className="flex justify-between items-left">
               <div>
-                <p className="font-bold text-[#00758f]">Skupna poraba električne </p>
-                <p className="font-bold text-[#00758f]">energije v Sloveniji (EUR/GWh):</p>
-                <div class="parent">
+                <p className="font-bold text-[#00758f]">Prevzem iz tujine (uvoz): </p>
+                <p id="div11" className="text-[#EC6625] text-xl">[{div11} GWh]</p> 
+                <div class="">
                   <div class="divPrvi mt-3">
-                    <p id="div11" className="text-[#EC6625] text-xl">{div11}</p> 
-                    <p id="div12" className="text-blue-600 text-xl">{div12}</p>
-                  </div>
-                  <div class="divDrugi mt-5 "> 
-                    <p className="font-mono text-2xl text-red-600">{div13}</p>
+                    <p className="font-bold text-[#00758f]">Oddaja v tujino (izvoz):</p>     
+                    <p id="div12" className="text-blue-600 text-xl">[{div12} GWh]</p>
                   </div>
                 </div> 
               </div>
@@ -750,7 +753,7 @@ const Dashboard = () => {
             {div24}
           </p>
         </div>
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl" >
+        <div className="hidden bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl" >
          <div>
             <p className="font-bold">Končna cena električne energije</p>
             <p className="font-bold">za značilnega gospodinjskega odjemalca:</p>

@@ -806,6 +806,32 @@ export const vsaY = {
   title: "Proizvodnja električne energije [GWh]",
   labelFormat: '{value}',
 };
+//2021..1992 Y
+export const Y2020 = {
+  lineStyle: { width: 0 },
+  minimum: 0,
+  maximum: 1800,
+  interval: 200,
+  majorTickLines: { width: 1 },
+  majorGridLines: { width: 1 },
+  minorGridLines: { width: 1 },
+  minorTickLines: { width: 1 },
+  title: "Proizvodnja električne energije [GWh]",
+  labelFormat: '{value}',
+};
+//2021..1992 Y
+export const Y2019 = {
+  lineStyle: { width: 0 },
+  minimum: 0,
+  maximum: 1600,
+  interval: 200,
+  majorTickLines: { width: 1 },
+  majorGridLines: { width: 1 },
+  minorGridLines: { width: 1 },
+  minorTickLines: { width: 1 },
+  title: "Proizvodnja električne energije [GWh]",
+  labelFormat: '{value}',
+};
 //Podatki
 //2021
 export const bil2021pod = [
@@ -851,7 +877,20 @@ export const bil2021pod = [
     { x: 'nov.', y2: 303 },
     { x: 'dec.', y2: 271 },
   ],
-
+  [
+    { x: 'jan.', y3: 1309},
+    { x: 'feb.', y3: 1181 },
+    { x: 'mar.', y3: 1200 },
+    { x: 'apr.', y3: 636 },
+    { x: 'maj.', y3: 1229 },
+    { x: 'jun.', y3: 1160 },
+    { x: 'jul.', y3: 1069 },
+    { x: 'avg.', y3: 1233 },
+    { x: 'sep.', y3: 968 },
+    { x: 'okt.', y3: 1060 },
+    { x: 'nov.', y3: 1158 },
+    { x: 'dec.', y3: 1142 },
+  ],
 ];
 //2021
 export const bil2021 = [
@@ -885,12 +924,23 @@ export const bil2021 = [
     opacity:0.9,
 
   },
+  { dataSource: bil2021pod[3],
+    xName: 'x',
+    yName: 'y3',
+    rowIndex: 1,
+    name: 'Skupaj',
+    type: 'Line',
+    width:3,
+    dashArray: 7,
+    marker:{visible: true, width: 10, height: 10,dataLabel: { visible: true, position:'Top' }, border: { width: 2, color: '#04C9D7' }},
+    background: 'purple',
+    opacity:0.9,
 
+  },
 ];
 ///////////////////////////////////////////////
 //Podatki
-//2021
-           
+//2020        
 export const bil2020pod = [
   [
     { x: 'jan.', y: 518},
@@ -921,21 +971,36 @@ export const bil2020pod = [
     { x: 'dec.', y1: 394 },
   ],
   [
-    { x: 'jan.', y2: 422},
-    { x: 'feb.', y2: 411 },
-    { x: 'mar.', y2: 319 },
-    { x: 'apr.', y2: 333 },
-    { x: 'maj.', y2: 649 },
-    { x: 'jun.', y2: 546 },
-    { x: 'jul.', y2: 423 },
-    { x: 'avg.', y2: 377 },
-    { x: 'sep.', y2: 213 },
-    { x: 'okt.', y2: 238 },
-    { x: 'nov.', y2: 303 },
-    { x: 'dec.', y2: 271 },
+    { x: 'jan.', y2: 302},
+    { x: 'feb.', y2: 212 },
+    { x: 'mar.', y2: 311 },
+    { x: 'apr.', y2: 290 },
+    { x: 'maj.', y2: 430 },
+    { x: 'jun.', y2: 465 },
+    { x: 'jul.', y2: 425 },
+    { x: 'avg.', y2: 418 },
+    { x: 'sep.', y2: 448 },
+    { x: 'okt.', y2: 620 },
+    { x: 'nov.', y2: 361 },
+    { x: 'dec.', y2: 466 },
   ],
 
+  [
+    { x: 'jan.', y3: 1119},
+    { x: 'feb.', y3: 984 },
+    { x: 'mar.', y3: 1057 },
+    { x: 'apr.', y3: 987 },
+    { x: 'maj.', y3: 1125 },
+    { x: 'jun.', y3: 1276 },
+    { x: 'jul.', y3: 1346 },
+    { x: 'avg.', y3: 1271 },
+    { x: 'sep.', y3: 1307 },
+    { x: 'okt.', y3: 1619 },
+    { x: 'nov.', y3: 1307 },
+    { x: 'dec.', y3: 1348 },
+  ],
 ];
+//Legenda
 //2020
 export const bil2020 = [
 
@@ -964,6 +1029,129 @@ export const bil2020 = [
     yName: 'y2',
     name: 'HE',
     type: 'StackingColumn',
+    background: 'purple',
+    opacity:0.9,
+
+  },
+  { dataSource: bil2020pod[3],
+    xName: 'x',
+    yName: 'y3',
+    rowIndex: 1,
+    name: 'Skupaj',
+    type: 'Line',
+    width:3,
+    dashArray: 7,
+    marker:{visible: true, width: 10, height: 10,dataLabel: { visible: true, position:'Top' }, border: { width: 2, color: '#04C9D7' }},
+    background: 'purple',
+    opacity:0.9,
+
+  },
+
+];
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+//Podatki
+//2019        
+export const bil2019pod = [
+  [
+    { x: 'jan.', y: 179},
+    { x: 'feb.', y: 282 },
+    { x: 'mar.', y: 234 },
+    { x: 'apr.', y: 353 },
+    { x: 'maj.', y: 482 },
+    { x: 'jun.', y: 524 },
+    { x: 'jul.', y: 318 },
+    { x: 'avg.', y: 271 },
+    { x: 'sep.', y: 279 },
+    { x: 'okt.', y: 229 },
+    { x: 'nov.', y: 582 },
+    { x: 'dec.', y: 490 },
+  ],
+  [
+    { x: 'jan.', y1: 408},
+    { x: 'feb.', y1:  356},
+    { x: 'mar.', y1: 299 },
+    { x: 'apr.', y1:  254},
+    { x: 'maj.', y1: 288 },
+    { x: 'jun.', y1: 301 },
+    { x: 'jul.', y1: 435 },
+    { x: 'avg.', y1: 289 },
+    { x: 'sep.', y1: 257 },
+    { x: 'okt.', y1: 480 },
+    { x: 'nov.', y1: 334 },
+    { x: 'dec.', y1: 345 },
+  ],
+  [
+    { x: 'jan.', y2: 515 },
+    { x: 'feb.', y2: 467 },
+    { x: 'mar.', y2: 517 },
+    { x: 'apr.', y2: 500 },
+    { x: 'maj.', y2: 516 },
+    { x: 'jun.', y2: 494 },
+    { x: 'jul.', y2: 504 },
+    { x: 'avg.', y2: 502 },
+    { x: 'sep.', y2: 488 },
+    { x: 'okt.', y2: 21 },
+    { x: 'nov.', y2: 494 },
+    { x: 'dec.', y2: 514 },
+  ],
+  [
+    { x: 'jan.', y3: 1102},
+    { x: 'feb.', y3: 1105 },
+    { x: 'mar.', y3: 1050 },
+    { x: 'apr.', y3: 1107 },
+    { x: 'maj.', y3: 1286 },
+    { x: 'jun.', y3: 1319 },
+    { x: 'jul.', y3: 1257 },
+    { x: 'avg.', y3: 1062 },
+    { x: 'sep.', y3: 1024 },
+    { x: 'okt.', y3: 730 },
+    { x: 'nov.', y3: 1410 },
+    { x: 'dec.', y3: 1349 },
+  ],
+];
+//Legenda
+//2019
+export const bil2019 = [
+
+  { dataSource: bil2019pod[0],
+    xName: 'x',
+    yName: 'y',
+    name: 'NE',
+    type: 'StackingColumn',
+    background: 'blue',
+    opacity:0.9,
+    fill:'#69D2E7',
+    width:3,
+  },
+
+  { dataSource: bil2019pod[1],
+    xName: 'x',
+    yName: 'y1',
+    name: 'TE',
+    type: 'StackingColumn',
+    background: 'red',
+    opacity:0.9,
+  },
+
+  { dataSource: bil2019pod[2],
+    xName: 'x',
+    yName: 'y2',
+    name: 'HE',
+    type: 'StackingColumn',
+    background: 'purple',
+    opacity:0.9,
+
+  },
+  { dataSource: bil2019pod[3],
+    xName: 'x',
+    yName: 'y3',
+    rowIndex: 1,
+    name: 'Skupaj',
+    type: 'Line',
+    width:3,
+    dashArray: 7,
+    marker:{visible: true, width: 10, height: 10,dataLabel: { visible: true, position:'Top' }, border: { width: 2, color: '#04C9D7' }},
     background: 'purple',
     opacity:0.9,
 
@@ -1008,16 +1196,23 @@ export const pieChartData = [
 
 // 2021
 export const pie2021 = [
-  { x: 'Izvoz', y: 15, text: '30%' },
-  { x: 'Uvoz', y: 6, text: '46%' },
-  { x: 'Domača proizvodnja', y: 20, text: '24%' },
+  { x: 'Izvoz', y: 30, text: '30%' },
+  { x: 'Uvoz', y: 48, text: '48%' },
+  { x: 'Domača proizvodnja', y: 22, text: '22%' },
 ];
 
 // 2020
 export const pie2020 = [
-  { x: 'Izvoz', y: 15, text: '30%' },
-  { x: 'Uvoz', y: 6, text: '46%' },
-  { x: 'Domača proizvodnja', y: 20, text: '24%' },
+  { x: 'Izvoz', y: 30, text: '30%' },
+  { x: 'Uvoz', y: 46, text: '46%' },
+  { x: 'Domača proizvodnja', y: 24, text: '24%' },
+];
+
+// 2019
+export const pie2019 = [
+  { x: 'Izvoz', y: 25, text: '25%' },
+  { x: 'Uvoz', y: 49, text: '49%' },
+  { x: 'Domača proizvodnja', y: 26, text: '26%' },
 ];
 
 export const ecomPieChartData = [
