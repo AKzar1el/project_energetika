@@ -5,7 +5,7 @@ import { ColumnSeries, ChartComponent, SeriesCollectionDirective, SeriesDirectiv
 const Line = ({ width, height, data, id, x, y, title }) => {
 
 return (
-<ChartComponent id='lineCharts' primaryXAxis={x} primaryYAxis={y} tooltip={{ enable: true }}>
+<ChartComponent id={id} primaryXAxis={x} primaryYAxis={y} tooltip={{ enable: true }}>
 <Inject services={[LineSeries, ColumnSeries, Legend, Tooltip, DataLabel, Category]}/>
 <SeriesCollectionDirective>
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}

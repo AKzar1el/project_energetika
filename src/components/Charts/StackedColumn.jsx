@@ -4,7 +4,7 @@ import { useStateContext } from '../../contexts/ContextProvider';
 
 const StackedColumn = ({ width, height, data, id, x, y, title }) => {
   const { currentMode } = useStateContext();
-
+  const marker = { visible: true, width: 10, height: 10,dataLabel: { visible: true, position:'Top' }, border: { width: 2, color: '#F8AB1D' } };
   return (
     <ChartComponent
       id={id}

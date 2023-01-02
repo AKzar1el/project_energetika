@@ -7,20 +7,20 @@ const StackedArea100 = () => {
         { x: '2020', y: 4194 , y1:6040, y2: 5514 }, { x: '2021', y: 3720 , y1: 5411 , y2: 5292 }
         ];
     const primaryxAxis = {
-    title: 'Years', valueType: 'Category', intervalType: 'Years', interval: 1,
+    title: '', valueType: 'Category', intervalType: 'Years', interval: 1,
     edgeLabelPlacement: 'Shift', labelFormat: 'y'
     };
     const primaryyAxis = { title: 'Prevzem električne energije [GWh]', labelFormat: '{value}', rangePadding: 'None', minimum: 0, maximum: 18000, interval: 2000,};
-
+    const marker = { visible: true, width: 10, height: 10,dataLabel: { visible: true, position:'Top' }, border: { width: 2, color: '#F8AB1D' } };
     return (
         <ChartComponent id='StackedArea100' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis}>
             <Inject services={[StackingColumnSeries, Legend, Tooltip, DataLabel, DateTime,Category]}/>
             <SeriesCollectionDirective>
-                <SeriesDirective dataSource={data} xName='x' yName='y' name='Fosilna goriva' type='StackingColumn'>
+                <SeriesDirective dataSource={data} xName='x' yName='y' name='Fosilna goriva' type='StackingColumn' marker={marker}>
                 </SeriesDirective>
-                <SeriesDirective dataSource={data} xName='x' yName='y1' name='Jedrsko gorivo' type='StackingColumn'>
+                <SeriesDirective dataSource={data} xName='x' yName='y1' name='Jedrsko gorivo' type='StackingColumn' marker={marker}>
                 </SeriesDirective>
-                <SeriesDirective dataSource={data} xName='x' yName='y2' name='Obnovljivi viri' type='StackingColumn'>
+                <SeriesDirective dataSource={data} xName='x' yName='y2' name='Obnovljivi viri' type='StackingColumn' marker={marker}>
                 </SeriesDirective>
             </SeriesCollectionDirective>
         </ChartComponent>

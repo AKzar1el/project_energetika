@@ -5,9 +5,10 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 
 import { Line, StackedArea100, Stacked, Pie, MultiplePanes, LineChart, SparkLine, StackedColumn } from '../components';
-import { pie2020, bil2021, vsaX, vsaY, cenaDobX, cenaDobY, cenaDob, skupnaX, skupnaY, ColorMappingPrimaryXAxis, ColorMappingPrimaryYAxis, skupnaPoraba, stacked2021, pie2021, colorMappingSeries, dropdownData, SparklineAreaData, ecomPieChartData, pieChartData, lineCustomSeries, LinePrimaryXAxis, LinePrimaryYAxis, LineOVEYAxis, lineOVESeries } from '../data/dummy';
+import { oveX, pie2020, bil2021, vsaX, vsaY, cenaDobX, cenaDobY, cenaDob, skupnaX, skupnaY, ColorMappingPrimaryXAxis, ColorMappingPrimaryYAxis, skupnaPoraba, stacked2021, pie2021, colorMappingSeries, dropdownData, SparklineAreaData, ecomPieChartData, pieChartData, lineCustomSeries, LinePrimaryXAxis, LinePrimaryYAxis, LineOVEYAxis, lineOVESeries } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 import header from './homepage.jpg';
+import ove from './ove.png';
 import images from './images.png';
 import slo from './slo.png';
 import tacho from './tachometer.png';
@@ -291,6 +292,7 @@ const Dashboard = () => {
             <Typography id="modal-modal-title" variant="h6" component="h6">
               Emisije toplogrednih plinov v Sloveniji od leta 1990
               <span className="text-lg block">Neto emisije toplogrednih plinov (vir: <a className="text-blue-700" href="https://ec.europa.eu/eurostat/databrowser/view/SDG_13_10__custom_1397649/bookmark/table?lang=en&bookmarkId=22c6f8a9-9c21-463d-a948-2a4e95bb2961">EEA</a>)</span>
+              <span className="text-base text-zinc-500">Zadnja posodobitev podatkov: 01.12.2022 23:00 (pred enim mesecem)</span>
             </Typography>
             <Typography id="modal-modal-description" sx={{ mt: 1 }}>
               <p  className="text-justify">
@@ -312,13 +314,19 @@ const Dashboard = () => {
           <Box sx={style}>
             <Typography id="modal-modal-title" variant="h6" component="h6">
               Energetska odvisnost Slovenije, od leta 2018
-              <span className="text-lg block">Odvisnost od uvoza energije (vir: <a className="text-blue-700" href="https://ec.europa.eu/eurostat/databrowser/view/NRG_IND_ID__custom_75257/bookmark/table?lang=en&bookmarkId=65dcfc55-80f4-46af-9451-1e68e86645cb">Eurostat</a>)</span>
+              <span className="text-lg block" >Odvisnost od uvoza energije (vir: <a className="text-blue-700" href="https://ec.europa.eu/eurostat/databrowser/view/NRG_IND_ID__custom_75257/bookmark/table?lang=en&bookmarkId=65dcfc55-80f4-46af-9451-1e68e86645cb">Eurostat</a>)</span>
+              <span className="text-base text-zinc-500" >Zadnja posodobitev podatkov: 14/04/2022 11:00 (pred 9 meseci)</span>
             </Typography>
             <Typography id="modal-modal-description" sx={{ mt: 1 }}>
               <p  className="text-justify">
                 Energetska odvisnost kaže, kako je gospodarstvo odvisno od uvoza za zadovoljevanje svojih potreb po energiji. Izračuna se kot neto uvoz, deljen z bruto razpoložljivo energijo. Države, ki več izvozijo kot uvozijo energijo, imajo negativne vrednosti. Bruto razpoložljiva energija je izračunana vrednost, definirana kot: primarna proizvodnja + predelani in reciklirani proizvodi + uvoz – izvoz + spremembe zalog.
-              </p>            
+              </p>
+              <span>Proizvajalci električne energije, vključeni v podporno shemo so v prvi polovici leta 2022 proizvedli 460,67 GWh električne energije iz obnovljivih virov oziroma v soproizvodnji z visokim izkoristkom za katero jim je bila izplačana državna pomoč v okviru podporne sheme za električno energijo, proizvedeno iz OVE in v SPTE.</span>
+                  
             </Typography>
+            <div className="flex object-center justify-center justify-items-center items-center ">
+              <img src={ove} className="border-solid border-1 mt-6"/>
+            </div>
           </Box>
         </Modal>
         <Modal
@@ -331,6 +339,7 @@ const Dashboard = () => {
             <Typography id="modal-modal-title" variant="h6" component="h6">
               Obnovljivi viri energije
               <span className="text-lg block">Delež obnovljivih virov energije v bruto končni porabi energije po sektorjih (vir: <a className="text-blue-700" href="https://ec.europa.eu/eurostat/databrowser/view/SDG_07_40/bookmark/table?lang=en&bookmarkId=9317d7f6-2cd0-4651-83fe-b749e9eec436">Eurostat</a>)</span>
+              <span className="text-base text-zinc-500">Zadnja posodobitev podatkov: 19/04/2022 23:00 (pred 8 meseci)</span>
             </Typography>
             <Typography id="modal-modal-description" sx={{ mt: 1 }}>
               <p  className="text-justify">
@@ -338,7 +347,7 @@ const Dashboard = () => {
               </p>            
             </Typography>
             <Box sx={{ mt:5 }}>
-              <LineChart primaryX={LinePrimaryXAxis} primaryY={LineOVEYAxis} data={lineOVESeries} />
+              <LineChart primaryX={oveX} primaryY={LineOVEYAxis} data={lineOVESeries} />
             </Box>
           </Box>
         </Modal> 
@@ -452,9 +461,10 @@ const Dashboard = () => {
           aria-describedby="modal-modal-description"
           > 
             <Box sx={style} className="model-content">
-              <Typography id="modal-modal-title" variant="h6" component="h6">
-                PORABA, PROIZVODNJA IN POKRITOST PORABE Z DOMAČO PROIZVODNJO <span className="block"> V OBDOBJU 2017–2021</span>
-                <span className="text-lg block">Neto emisije toplogrednih plinov (vir: <a className="text-blue-700" href="https://ec.europa.eu/eurostat/databrowser/view/SDG_13_10__custom_1397649/bookmark/table?lang=en&bookmarkId=22c6f8a9-9c21-463d-a948-2a4e95bb2961">EEA</a>)</span>
+              <Typography id="modal-modal-title" variant="h6" component="h6">Pokritost porabe z domačo proizvodnjo
+                
+                <span className="text-lg block">PORABA, PROIZVODNJA IN POKRITOST PORABE Z DOMAČO PROIZVODNJO <span className="block"> V OBDOBJU 2017–2021 (vir: <a className="text-blue-700" href="https://www.agen-rs.si/documents/10926/38704/Poro%C4%8Dilo-o-stanju-na-podro%C4%8Dju-energetike-v-Sloveniji-v-letu-2021/17048023-cfc5-4283-8e48-5fa078ad2ae6">AGENCIJA, ELEKTROOPERATERJI</a>)</span></span>
+                <span className="text-base text-zinc-500">Zadnja posodobitev podatkov: 21/01/2022 23:00 (pred 12 meseci)</span>
               </Typography>
               <Typography id="modal-modal-description" sx={{ mt: 1 }}>
                 <p  className="text-justify">
@@ -466,19 +476,21 @@ const Dashboard = () => {
                   distribucijskega sistema iz RTP Vrtojba in Sežana
                   distribuirane v Italijo, se ne upoštevajo kot končni
                   odjem v Sloveniji.
-                <span className="block">
-                  Kot je prikazano na sliki 13, je bila v opazovanem
-                  obdobju pokritost z domačo proizvodnjo najvišja v
-                  letu 2020 (92,6 %). V letu 2021 je pokritost porabe
-                  z domačo proizvodnjo znašala 82,9 % in je bila na
-                  približno enaki ravni kot pred letom 2020.
-                </span>
                 27  
                 </p>            
               </Typography>
               <Box sx={{ mt:5 }}>
                 <MultiplePanes />
               </Box>
+              <Typography>
+              <span className="block">
+                  Kot je prikazano na grafikonu, je bila v opazovanem
+                  obdobju pokritost z domačo proizvodnjo najvišja v
+                  letu 2020 (92,6 %). V letu 2021 je pokritost porabe
+                  z domačo proizvodnjo znašala 82,9 % in je bila na
+                  približno enaki ravni kot pred letom 2020.
+                </span>
+              </Typography>
             </Box>
             
           </Modal>
@@ -490,8 +502,8 @@ const Dashboard = () => {
           > 
             <Box sx={style} className="model-content">
               <Typography id="modal-modal-title" variant="h6" component="h6">
-                PORABA ELEKTRIČNE ENERGIJE V OBDOBJU 2017–2021PORABA ELEKTRIČNE ENERGIJE V OBDOBJU 2017–2021
-                <span className="text-lg block">Neto emisije toplogrednih plinov (vir: <a className="text-blue-700" href="https://ec.europa.eu/eurostat/databrowser/view/SDG_13_10__custom_1397649/bookmark/table?lang=en&bookmarkId=22c6f8a9-9c21-463d-a948-2a4e95bb2961">EEA</a>)</span>
+                Poraba Električne Energije 
+                <span className="text-lg block">V Obdobju 2017-2021 (vir: <a className="text-blue-700" href="https://www.agen-rs.si/documents/10926/38704/Poro%C4%8Dilo-o-stanju-na-podro%C4%8Dju-energetike-v-Sloveniji-v-letu-2021/17048023-cfc5-4283-8e48-5fa078ad2ae6">AGENCIJA, ELEKTROOPERATERJI</a>)</span>
               </Typography>
               <Typography id="modal-modal-description" sx={{ mt: 1 }}>
                 <p>
@@ -531,8 +543,8 @@ const Dashboard = () => {
           > 
             <Box sx={style} className="model-content">
               <Typography id="modal-modal-title" variant="h6" component="h6">
-                PREVZEM ELEKTRIČNE ENERGIJE IZ PROIZVODNIH ENOT V PRENOSNI IN DISTRIBUCIJSKI SISTEM V OBDOBJU 2017–2021
-                <span className="text-lg block">Neto emisije toplogrednih plinov (vir: <a className="text-blue-700" href="https://ec.europa.eu/eurostat/databrowser/view/SDG_13_10__custom_1397649/bookmark/table?lang=en&bookmarkId=22c6f8a9-9c21-463d-a948-2a4e95bb2961">EEA</a>)</span>
+                PREVZEM ELEKTRIČNE ENERGIJE IZ PROIZVODNIH ENOT V PRENOSNI IN DISTRIBUCIJSKI SISTEM
+                <span className="text-lg block"> V Obdobju 2017–2021 (vir: <a className="text-blue-700" href="https://www.agen-rs.si/documents/10926/38704/Poro%C4%8Dilo-o-stanju-na-podro%C4%8Dju-energetike-v-Sloveniji-v-letu-2021/17048023-cfc5-4283-8e48-5fa078ad2ae6">AGENCIJA, ELEKTROOPERATERJI</a>)</span>
               </Typography>
               <Typography id="modal-modal-description" sx={{ mt: 1 }}>
                 Delež proizvedene električne energije v hidroelektrarnah in v elektrarnah na druge obnovljive vire se
@@ -557,15 +569,15 @@ const Dashboard = () => {
           > 
             <Box sx={style} className="model-content">
               <Typography id="modal-modal-title" variant="h6" component="h6">
-                Cene električne energije za gospodinjske odjemalce (EUR/kWh) po: STANDARDNA PORABNIŠKA SKUPINA (L)
-                <span className="text-lg block">STANDARDNA PORABNIŠKA SKUPINA (LETNA PORABA) (vir: <a className="text-blue-700" href="https://ec.europa.eu/eurostat/databrowser/view/SDG_13_10__custom_1397649/bookmark/table?lang=en&bookmarkId=22c6f8a9-9c21-463d-a948-2a4e95bb2961">EEA</a>)</span>
+                Cene električne energije za gospodinjske odjemalce (EUR/kWh)
+                <span className="text-lg block">STANDARDNA PORABNIŠKA SKUPINA (LETNA PORABA) (vir: <a className="text-blue-700" href="https://pxweb.stat.si/SiStatData/pxweb/sl/Data/-/1817540S.px">SiStat</a>)</span>
               </Typography>
               <Typography id="modal-modal-description" sx={{ mt: 1 }}>
                 Porabniške skupine od DA do DE so definirane glede na interval letne porabe.
-                https://pxweb.stat.si/SiStatData/pxweb/sl/Data/-/1817540S.px        
+                https://pxweb.stat.si/SiStatData/pxweb/sl/Data/-/1817545S.PX    
               </Typography>
-              <Box sx={{ mt:5 }}>
-                <Line x={cenaDobX} y={cenaDobY} data={cenaDob} />
+              <Box sx={{ mt:5 }} className="cenaGospod">
+                <Line x={cenaDobX} y={cenaDobY} data={cenaDob} id={"cenaGospod"}/>
               </Box>
             </Box>
             
@@ -577,15 +589,16 @@ const Dashboard = () => {
           aria-describedby="modal-modal-description"
           > 
             <Box sx={style} className="model-content">
-              <Typography id="modal-modal-title" variant="h6" component="h6">
-                Emisije toplogrednih plinov v Sloveniji od leta 1990
-                <span className="text-lg block">Neto emisije toplogrednih plinov (vir: <a className="text-blue-700" href="https://ec.europa.eu/eurostat/databrowser/view/SDG_13_10__custom_1397649/bookmark/table?lang=en&bookmarkId=22c6f8a9-9c21-463d-a948-2a4e95bb2961">EEA</a>)</span>
+             <Typography id="modal-modal-title" variant="h6" component="h6">
+                Cene električne energije za negospodinjske odjemalce (EUR/kWh)
+                <span className="text-lg block">STANDARDNA PORABNIŠKA SKUPINA (LETNA PORABA) (vir: <a className="text-blue-700" href="https://pxweb.stat.si/SiStatData/pxweb/sl/Data/-/1817545S.PX">SiStat</a>)</span>
               </Typography>
               <Typography id="modal-modal-description" sx={{ mt: 1 }}>
-              https://pxweb.stat.si/SiStatData/pxweb/sl/Data/-/1817545S.PX     
+                Porabniške skupine od IA do IF so definirane glede na interval letne porabe.
+                https://pxweb.stat.si/SiStatData/pxweb/sl/Data/-/1817545S.PX  
               </Typography>
-              <Box sx={{ mt:5 }}>
-                <Line x={cenaDobX} y={cenaDobY} data={cenaDob} />
+              <Box sx={{ mt:5 }} className="cenaNegospod">
+                <Line x={cenaDobX} y={cenaDobY} data={cenaDob} id={"cenaNegospod"}/>
               </Box>
             </Box>
             
