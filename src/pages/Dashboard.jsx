@@ -198,18 +198,18 @@ const Dashboard = () => {
           controls={false}
           muted
           autoPlay
-          className="w-full h-[353px] object-fill object-center"
+          className="w-full h-[500px] object-fill object-center"
         /> 
       </div>
 
-      <div className="">
+      <div className="mt-1 shadow-lg pb-12">
         <div className="flex flex-wrap w-full p-1">
           <div className="grid justify-items-start justify-center p-1 mt-2 w-1/2 pl-16 min-[1200px]:pl-0 min-[1850px]:translate-x-[10%] min-[1850px]:">
             <div className="mt-1 font-thin">
               <p className="text-4xl text-[#00758f] font-normal">Stanje Energetike v Sloveniji</p>
-              <p className="text-2xl font-light" >Dostop do podatkov Slovenije na področju energetike</p>
+              <p className="mt-3 text-2xl font-light" >Dostop do podatkov Slovenije na področju energetike</p>
             </div>
-            <div className="text-sm">
+            <div className="mt-3 text-sm">
               <p>Dobrodošli v orodju za interaktivne podatke.</p>
               <p>
                 Raziščite najnovejše podatke in trende v energetski industriji z brskanjem po intuitivnih
@@ -219,10 +219,10 @@ const Dashboard = () => {
               </p>
             </div>
             <div>
-              <p className="text-sm">Dostop do energetske statistike:</p>      
+              <p className="mt-3 text-sm">Dostop do energetske statistike:</p>      
             </div>
             <div>
-              <ul class="list-disc text-sm list-inside mt-2">
+              <ul class="ml-6 list-disc text-sm list-inside mt-3">
                 <li>o proizvodnji, porabi in trgovini z nafto, plinom, premogom, energijo in</li>
                 <span className="lg:pl-5">obnovljivimi viri;</span>
                 <li>o spremembi cen energentov;</li>
@@ -232,14 +232,14 @@ const Dashboard = () => {
             </div>
 
             <div>
-              <p className="text-sm">Pridobite ekskluzivne napovedi o srednjeročnih slovenskih in evropskih energetskih </p>
+              <p className="mt-3 text-sm">Pridobite ekskluzivne napovedi o srednjeročnih slovenskih in evropskih energetskih </p>
               <p className="text-sm">trendih, ki so posledica ukrajinskih razmer.</p>
             </div>
             <div>
-              <p className="text-sm">Izkoristite uporabniku prijazne funkcije:</p>
+              <p className="text-sm mt-3">Izkoristite uporabniku prijazne funkcije:</p>
             </div>
             <div>
-              <ul class="list-disc text-sm list-inside mt-2">
+              <ul class="ml-6 list-disc text-sm list-inside mt-3">
                 <li>Interaktivni grafi za izbiro območja z nadzorom povečave in pomanjšanja;</li>
                 <li>Izbira časovnega obdobja;</li>
                 <li>Animirani podatki za razvoj v letih od 1990 do 2021;</li>
@@ -248,7 +248,7 @@ const Dashboard = () => {
             </div>
             
           </div>
-          <div className="w-1/2 invisible min-[1200px]:visible -translate-x-[10%]">
+          <div className="w-1/2 invisible min-[1200px]:visible -translate-x-[10%] mt-12">
             <img src={slo} className="skew-y-0.5 sm:translate-y-10"/>
           </div>
         </div>
@@ -256,7 +256,7 @@ const Dashboard = () => {
           Podatki Env and Energy: https://www.destatis.de/Europa/EN/Topic/Key-indicators/EnvironmentEnergy.html
           Podatki by topic: https://www.destatis.de/Europa/EN/Topic/_node.html
         </span>
-        <div>
+        <div className="mt-12">
           <div class="flex flex-wrap justify-center mb-3 gap-x-4 sm:gap-x-28 mt-6 pb-3">
             <div class="tooltip"> <span class="tooltiptext text-xl font-bold">Klikni me!</span>
               <div onClick={handleOpen} className="rounded-full outline outline-1 outline-offset-0 outline-[#00758f] shadow-lg shadow-[#00758f] hover:shadow-indigo-500/40 p-1
@@ -360,7 +360,7 @@ const Dashboard = () => {
       </div>
 
       <div className="grid">
-        <div className="mt-1 ml-32 mr-32 border flex flex-nowrap justify-start justify-items-start items-center border-gray-300 rounded snap-center">
+        <div className="mt-12 ml-32 mr-32 border flex flex-nowrap justify-start justify-items-start items-center border-gray-300 rounded snap-center">
           <img src={images} 
           className="w-14 h-14" />
           <p className="mt-1 mr-3 ml-3 text-2xl text-[#00758f]">
@@ -613,7 +613,7 @@ const Dashboard = () => {
       </div>
       
 
-      <div className="flex gap-9 w-full flex-wrap justify-center shadow-lg mb-3 pb-3">
+      <div className="flex gap-9 w-full flex-wrap justify-center shadow-lg mb-3 pb-12">
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-1200  shadow-2xl shadow-blue-500/50 ">
           <div className="flex justify-center mt-2">
             <p className="font-semibold text-xl align-middle">Proizvodnja elektrike, Slovenija</p>
@@ -664,7 +664,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className="mt-6 ml-32 mr-32 border flex justify-start justify-items-start items-center border-gray-300 rounded snap-center">
+      <div className="mt-12 ml-32 mr-32 border flex justify-start justify-items-start items-center border-gray-300 rounded snap-center">
         <img src={images} 
         className="w-14 h-14" />
         <p className="mt-1 mr-3 ml-3 text-2xl text-[#00758f]">
@@ -672,7 +672,7 @@ const Dashboard = () => {
         </p>
       </div>
       <div className="flex gap-10 w-full flex-wrap justify-center">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-1200  ">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-1200 shadow-2xl shadow-blue-500/50 mt-12 ">
           <div className="flex justify-center mt-3">
             <p className="font-semibold text-xl align-middle capitalize">Poročilo o stanju na področju energetike v sloveniji 2021</p>
           </div>
@@ -691,7 +691,7 @@ const Dashboard = () => {
          
         <div className="mt-12">
           <div
-            className=" rounded-2xl md:w-400 p-4 m-3"
+            className="shadow-xl shadow-[#77D6E8] rounded-2xl md:w-400 p-4 m-3"
             style={{ backgroundColor: currentColor }}
            >
             <div className="mt-6">     
@@ -721,7 +721,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="mt-12 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex flex-nowrap justify-left items-left gap-10">
+          <div className="shadow-xl mt-12 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex flex-nowrap justify-left items-left gap-10">
             <div className="flex justify-between items-left">
               <div>
                 <p className="font-bold text-[#00758f]">Prevzem iz tujine (uvoz): </p>
@@ -738,8 +738,8 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="flex gap-10 m-4 flex-wrap justify-center">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl" >
+      <div className="mt-6 flex gap-10 m-4 flex-wrap justify-center">
+        <div className="shadow-xl bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl" >
           <p className="font-bold text-xl" >
             {div21}
           </p>
@@ -753,7 +753,7 @@ const Dashboard = () => {
             {div24}
           </p>
         </div>
-        <div className="hidden bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl" >
+        <div className="hidden shadow-xl bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl" >
          <div>
             <p className="font-bold">Končna cena električne energije</p>
             <p className="font-bold">za značilnega gospodinjskega odjemalca:</p>
@@ -764,7 +764,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="grid justify-items-center bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl" >
+        <div className="grid shadow-xl justify-items-center bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl" >
           <p className="font-bold text-xl" >
             {div41} %
           </p>
@@ -772,7 +772,7 @@ const Dashboard = () => {
             – ocenjen delež OVE
           </p>
         </div>
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl" >
+        <div className="shadow-xl bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl" >
           <p className="text-xl mt-2" >
             {div51}
           </p>

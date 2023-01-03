@@ -44,7 +44,7 @@ const Navbar = () => {
   const handleActiveMenu = () => setActiveMenu(!activeMenu);
 
   return (
-    <div className="flex-row">
+    <div className="flex-row absolute w-full">
       <div className="bg-[#273443]">
         <div className="flex justify-between p-2 pt-4 pb-4 md:ml-5 md:mr-5 relative ">
           <div className="justify-start">
@@ -69,7 +69,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-20 flex gap-3 justify-center justify-items-center content-center items-center hidden">
+      <div className="hidden w-full h-20 flex gap-3 justify-center justify-items-center content-center items-center">
         <div className="">
           lol
         </div>
